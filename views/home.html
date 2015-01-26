@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>主页</title>
+	<meta charset="utf-8">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+      <script src="/javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+      <script src="/javascripts/bootstrap.min.js" type="text/javascript"></script>
+		<style type="text/css">
+			.panel-title{
+				font-size: 24px;
+				font-weight: bold;
+			}
+            .spys{
+                list-style-type: none;
+            }
+            .spys li{
+                float: left;
+                margin: 10px 10px;
+                width: 180px;
+                height: 230px;
+            }
+            .spys li div strong{
+                color: red;
+            }
+
+		</style>
+  </head>
+<body>
+<div style="margin:50px auto;width: 900px;">
+    <div class="panel panel-default" >
+        <div class="panel-heading" style="height: 40px;">
+                    <div style="text-align: left">
+                        <span style="font-size:20px; font-weight:bold;">商品展示页</span>
+                        <div style="float: right;">
+                            <a class="btn  btn-xs btn-success" href="addcommodity" style="margin-right: 35px;">添加商品</a>
+                            <a class="btn  btn-xs btn-success" href="cart" style="margin-right: 35px;">购物车</a>
+                            <a class="btn btn-xs btn-info" href="logout">退 出</a>
+                        </div>
+                    </div>
+                </div>
+        <div class="panel-body">
+            <ul class="spys" >
+                <%for(var i in Commoditys){ if(!Commoditys[i].name)continue;%>
+                    <li class="spys li">
+                        <div >
+                            <img width="80" height="100"  src="/images/<%=Commoditys[i].imgSrc%>">
+                        </div>
+                        <div >
+                            <a ><%=Commoditys[i].name%></a>
+                            <strong style="color:red;" >￥<%=Commoditys[i].price%></strong>
+                        </div>
+                        <div >
+                            <a class="btn btn-success" style="width: 120px;"  href="/addToCart/<%=Commoditys[i]._id%>">加入购物车</a>
+                        </div>
+                    </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>添加商品</title>
+    <meta charset="utf-8">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="/javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/javascripts/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        function addcommodity(){
+                var name = $('#cname').val(), price = $('#cprice').val();
+                var data = { "name": name, price:price,"imgSrc": "xmsz-"+Math.floor(Math.random()*5+1)+".jpg"};
+                $.ajax({
+                    url:'/addcommodity',
+                    type:'POST',
+                    data:data,
+                    success:function(data,status){
+                        if(status == 'success'){
+                            alert('添加成功！')
+                        }
+                    },
+                    error:function(data,err){
+                        alert('添加失败！')
+                    }
+                });
+        }
+    </script>
+</head>
+<body>
+<div style="margin:100px auto;width: 500px;" class="add_c">
+    <h1>添加商品</h1>
+    <a class="btn  btn-xs btn-success" href="home" style="margin-left: 400px;">返回商品页</a>
+    <form action="#"  role="form" method="post" >
+        <input style="margin-top: 30px;" id="cname" type="text" class="form-control"  name="cname" placeholder="商品名称" />
+        <input style="margin-top: 30px;" id="cprice"  class="form-control" name="cprice"  placeholder="商品价格" />
+        <input style="margin-top: 30px;" type="button" class="btn btn-success btn-block" onclick="addcommodity()" value="添 加" />
+    </form>
+</div>
+</body>
+</html>
+
+
