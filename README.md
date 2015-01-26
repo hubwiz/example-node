@@ -11,23 +11,7 @@
 
 4. 加入购物车和结算
 
-源码地址：https://github.com/hubwiz/example-node.git
-
-课程地址：http://www.hubwiz.com/course/549a704f88dba0136c371703/
-
-课程目录：
-
-1. 需求和设计
-
-2. 数据库设计
-
-3. 详细设计
-
-4. 实现注册
-
-5. 登录和浏览
-
-6. 购物车结算
+[欢迎到汇智网](http://www.hubwiz.com)学习[《node.js实战》](http://www.hubwiz.com/course/549a704f88dba0136c371703/)课程
 
 使用说明：
 
