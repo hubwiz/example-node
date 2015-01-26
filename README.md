@@ -1,2 +1,2 @@
-# project-node
+# example-node
 example
