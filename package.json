@@ -1,0 +1,15 @@
+{
+  "name": "newproject",
+  "version": "0.0.0",
+  "description": "Test",
+  "main": "app.js",
+  "dependencies": {
+  "express": "~3.4.8",
+	"express-session": "~1.9.3",
+  "body-parser": "~1.10.0",
+	"multer": "~0.1.6",
+	"path": "~0.4.9",
+	"mongoose": "~3.8.1",
+  "ejs": "~0.8.5"
+  }
+}
