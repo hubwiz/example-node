@@ -2,6 +2,7 @@
 一个简单的电商网站demo，使用了nodejs, express, mongodb, mongoose等功能模块。
 
 实现功能：
+rahul kumar
 
 1. 注册
  
